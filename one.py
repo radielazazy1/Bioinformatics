@@ -7,10 +7,23 @@ def debruijn(x):
   kmers = set()
   for y in x:
     for i in range(L-1)
-      kmers = x[i:i+2]
+      new = x[i:i+2]
       kmers.add(newkmer)
 
-  allkmers = ''.join(x) for x in product(kmers, repeat=L)
+  allkmers = [''.join(x) for x in product(kmers, repeat=L)]
+
+edges =[]
+for y in allkmers:
+  if y in x:
+    prefix = x[:-1]
+    suffix [1:]
+    edges.append((prefix, suffix))
+
+edges.sort()
+
+return edges
+
+
 
   
     
